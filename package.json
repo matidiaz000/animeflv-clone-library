@@ -1,6 +1,6 @@
 {
   "name": "@matidiaz000/animeflv-clone-library",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/matidiaz000"
   },
@@ -42,6 +42,5 @@
   "peerDependencies": {
     "react": ">=16.9.0",
     "react-dom": ">=16.9.0"
-  },
-  "private": true
+  }
 }
