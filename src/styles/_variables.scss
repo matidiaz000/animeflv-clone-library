@@ -1,0 +1,130 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+// scss-docs-start gray-color-variables
+$white:       #fff !default;
+$gray-100:    #F8F9FA !default;
+$gray-200:    #E9ECEF !default;
+$gray-300:    #DEE2E6 !default;
+$gray-400:    #CED4DA !default;
+$gray-500:    #CED4DA !default;
+$gray-600:    #6C757D !default;
+$gray-700:    #495057 !default;
+$gray-800:    #343A40 !default;
+$gray-900:    #212529 !default;
+$black:       #000 !default;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start color-variables
+$blue:        #0DCAF0 !default;
+$red:         #dc3545 !default;
+$orange:      #FD7E14 !default;
+$yellow:      #ffc107 !default;
+$green:       #28A745 !default;
+// scss-docs-end color-variables
+
+// fusv-disable
+$blue-100:    #CFF4FC !default;
+$blue-200:    #9EEAF9 !default;
+$blue-300:    #6EDFF6 !default;
+$blue-400:    #3DD5F3 !default;
+$blue-500:    $blue !default;
+$blue-600:    #058DB5 !default;
+
+$orange-100:  #FFE5D0 !default;
+$orange-200:  #FECBA1B2 !default;
+$orange-300:  #FEB272 !default;
+$orange-400:  #FD9843 !default;
+$orange-500:  $orange !default;
+$orange-600:  #EC590A !default;
+
+// scss-docs-start theme-color-variables
+$primary:                   $blue !default;
+$secondary:                 $orange !default;
+$success:                   $green !default;
+$info:                      $primary !default;
+$warning:                   $yellow !default;
+$danger:                    $red !default;
+$light:                     $gray-100 !default;
+$dark:                      $gray-900 !default;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "success":                $success,
+  "info":                   $info,
+  "warning":                $warning,
+  "danger":                 $danger,
+
+  "white":                  $white,
+  "light":                  $light,
+  "gray-200":               $gray-200,
+  "gray-300":               $gray-300,
+  "gray-400":               $gray-400,
+  "gray-500":               $gray-500,
+  "gray-600":               $gray-600,
+  "gray-700":               $gray-700,
+  "gray-800":               $gray-800,
+  "dark":                   $dark,
+  "black":                  $black,
+
+  "primary-100":            $blue-100,
+  "primary-200":            $blue-200,
+  "primary-300":            $blue-300,
+  "primary-400":            $blue-400,
+  "primary":                $primary,
+  "primary-600":            $blue-600,
+  
+  "secondary-100":          $orange-100,
+  "secondary-200":          $orange-200,
+  "secondary-300":          $orange-300,
+  "secondary-400":          $orange-400,
+  "secondary":              $secondary,
+  "secondary-600":          $orange-600,
+  
+) !default;
+// scss-docs-end theme-colors-map
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-text-align:           null !default;
+$body-color:                $gray-900 !default;
+$body-bg:                   $white !default;
+
+$body-secondary-color:      rgba($body-color, .75) !default;
+$body-secondary-bg:         $gray-200 !default;
+
+$body-tertiary-color:       rgba($body-color, .5) !default;
+$body-tertiary-bg:          $gray-100 !default;
+
+$body-emphasis-color:       #343A40 !default;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:                true !default;
+$enable-rounded:              true !default;
+$enable-shadows:              true !default;
+$enable-gradients:            false !default;
+$enable-transitions:          true !default;
+$enable-reduced-motion:       true !default;
+$enable-smooth-scroll:        true !default;
+$enable-grid-classes:         true !default;
+$enable-container-classes:    true !default;
+$enable-cssgrid:              false !default;
+$enable-button-pointers:      true !default;
+$enable-rfs:                  true !default;
+$enable-validation-icons:     true !default;
+$enable-negative-margins:     true !default;
+$enable-deprecation-messages: true !default;
+$enable-important-utilities:  true !default;
+
+$enable-dark-mode:            false !default;
+$color-mode-type:             data !default; // `data` or `media-query`
