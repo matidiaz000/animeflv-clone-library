@@ -1,6 +1,6 @@
 {
   "name": "@matidiaz000/animeflv-clone-library",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/matidiaz000"
   },
@@ -14,7 +14,7 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/xxx.js"
+      "import": "./dist/index.js"
     },
     "./dist/*.css": {
       "import": "./dist/*.css",
