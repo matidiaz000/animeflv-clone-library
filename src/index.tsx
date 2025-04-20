@@ -1,5 +1,5 @@
 import './index.scss'
-import IconsList from "./icomoon/selection.json";
+import IconsList from "./assets/selection.json";
 import { Button } from "./components/Button";
 import { Icon } from "./components/Icon";
 import { Card } from "./components/Card";

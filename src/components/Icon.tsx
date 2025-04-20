@@ -1,4 +1,4 @@
-import IconsJSON from '../icomoon/selection.json'
+import IconsJSON from '../assets/selection.json'
 
 interface IconSet {
   icon: {
