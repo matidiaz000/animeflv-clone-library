@@ -34,7 +34,7 @@ export const Icon = ({ icon, size = 24, style = {}, ...rest }: IProps) => {
   return (
     <>
       {
-        IconsJSON.icons.map((el: IconSet) => {
+        IconsJSON?.icons?.map((el: IconSet) => {
           if (el.properties.name === icon) {
             return (
               <svg
