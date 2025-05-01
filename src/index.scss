@@ -43,4 +43,11 @@ i {
 .clamp5 {
   line-clamp: 5;
   -webkit-line-clamp: 5;
+  min-height: 5rem;
+}
+
+.clamp2 {
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  min-height: 2rem;
 }

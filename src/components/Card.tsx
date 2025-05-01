@@ -46,7 +46,7 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
       <div className="text-dark text-decoration-none p-2">
         <span className="fw-bold lh-1 d-block mb-1">{title}</span>
         <div className="d-flex justify-content-between align-items-center">
-          <span className="small">{subtitle}</span>
+          <span className="small clamp clamp2">{subtitle}</span>
           <>{children}</>
         </div>
       </div>
@@ -56,13 +56,19 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
   if (title && subtitle) return (
     <a href={link} className="text-decoration-none">
       <div className="position-relative">
-        <img className="rounded-3 mw-100 w-100" src={img} alt={title} />
+        <div
+          className="rounded-3 mw-100 w-100"
+          style={{
+            height: 235,
+            backgroundImage: img
+          }}
+        ></div>
         <span className={`badge bg-${categoryData(category, "color")} position-absolute bottom-0 start-0 m-2`}>
           {categoryData(category, "text")}
         </span>
       </div>
-      <div className="text-center text-dark p-2 mt-2">
-        <span className="fw-bold d-block lh-1 mb-2">{title}</span>
+      <div className="text-center text-dark py-2 mt-2">
+        <span className="fw-bold d-block lh-1 mb-2 clamp clamp2">{title}</span>
         <span className="text-opacity-50 small d-block">{subtitle}</span>
       </div>
     </a>
