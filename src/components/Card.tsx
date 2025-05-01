@@ -44,7 +44,7 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
         </span>
       </div>
       <div className="text-dark text-decoration-none p-2">
-        <span className="fw-bold lh-1 d-block mb-1">{title}</span>
+        <span className="fw-bold lh-1 mb-1 clamp clamp2">{title}</span>
         <div className="d-flex justify-content-between align-items-center">
           <span className="small clamp clamp2">{subtitle}</span>
           <>{children}</>
@@ -69,7 +69,7 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
         </span>
       </div>
       <div className="text-center text-dark py-2 mt-2">
-        <span className="fw-bold d-block lh-1 mb-2 clamp clamp2">{title}</span>
+        <span className="fw-bold lh-1 mb-2 clamp clamp2">{title}</span>
         <span className="text-opacity-50 small d-block">{subtitle}</span>
       </div>
     </a>
