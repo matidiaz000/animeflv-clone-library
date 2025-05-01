@@ -19,21 +19,24 @@ interface IProps {
 }
 
 export const Button = ({variant, children, href, external, disabled, color, span, size, startIcon, endIcon, className, ...rest}: IProps) => {
-  const getClass = () => `
-    btn 
-    text-decoration-none
-    ${!className.includes("rounded") && "rounded-pill"}
-    ${disabled ? `disabled` : ""}
-    ${color && variant == 'text' ? `text-${color} border-0` : ""}
-    ${color && variant == 'contained' ? `btn-${color}` : ""}
-    ${color && variant == 'outlined' ? `btn-outline-${color}` : ""}
-    ${color && variant == 'watercolor' ? `watercolor-${color}` : ""}
-    ${size == 'sm' ? `btn-sm` : ""}
-    ${size == 'md' ? `` : ""}
-    ${size == 'lg' ? `btn-lg` : ""}
-    ${startIcon && !children && !endIcon ? "rounded-circle border-0 lh-0 p-2" : ""}
-    ${className}
-  `;
+  const getClass = (): string => {
+    const listClass: string[] = [
+      (span ? 'px-2 py-1' : 'btn'), 
+      'text-decoration-none',
+      (!className.includes("rounded") ? "rounded-pill" : ""),
+      (disabled ? `disabled` : ""),
+      (color && variant == 'text' ? `text-${color} border-0` : ""),
+      (color && variant == 'contained' ? `btn-${color}` : ""),
+      (color && variant == 'outlined' ? `btn-outline-${color}` : ""),
+      (color && variant == 'watercolor' ? `watercolor-${color}` : ""),
+      (size == 'sm' ? `btn-sm` : ""),
+      (size == 'md' ? `` : ""),
+      (size == 'lg' ? `btn-lg` : ""),
+      (startIcon && !children && !endIcon ? "rounded-circle border-0 lh-0 p-2" : ""),
+      className
+    ];
+    return listClass.join(" ");
+  };
 
   if (href) {
     return (
