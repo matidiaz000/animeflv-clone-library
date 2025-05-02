@@ -18,6 +18,19 @@ i {
   padding: 2em;
 }
 
+.CardComponent:hover .bg-image {
+  transform: scale(1.1);
+}
+
+.CardComponent .bg-image {
+  transition: transform .5s ease-in-out;
+}
+
+.CardComponent div.bg-image {
+  height: 235px;
+  background-size: "cover";
+}
+
 @each $color, $value in $theme-colors {
   .watercolor-#{$color} {
     color: $value;

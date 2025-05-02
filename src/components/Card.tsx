@@ -36,16 +36,16 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
   }
 
   if (time && children) return (
-    <a href={link} className="text-decoration-none">
-      <div className="position-relative">
-        <img className="rounded-3 mw-100 w-100 border-0" src={img} alt={title} />
+    <a href={link} className="text-decoration-none CardComponent">
+      <div className="position-relative rounded-3 overflow-hidden">
+        <img className="mw-100 w-100 border-0 bg-image" src={img} alt={title} />
         <span className="badge bg-dark text-white position-absolute bottom-0 end-0 m-2">
           {time}
         </span>
       </div>
       <div className="text-dark text-decoration-none p-2">
         <span className="fw-bold lh-1 mb-1 clamp clamp2">{title}</span>
-        <div className="d-flex justify-content-between align-items-center">
+        <div className="d-flex justify-content-between align-items-start">
           <span className="small clamp clamp2">{subtitle}</span>
           <>{children}</>
         </div>
@@ -54,15 +54,11 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
   )
 
   if (title && subtitle) return (
-    <a href={link} className="text-decoration-none">
-      <div className="position-relative">
+    <a href={link} className="text-decoration-none CardComponent">
+      <div className="position-relative rounded-3 overflow-hidden">
         <div
-          className="rounded-3 mw-100 w-100"
-          style={{
-            height: 235,
-            backgroundImage: `url(${img})`,
-            backgroundSize: 'cover'
-          }}
+          className="mw-100 w-100 bg-image"
+          style={{ backgroundImage: `url(${img})` }}
         ></div>
         <span className={`badge bg-${categoryData(category, "color")} position-absolute bottom-0 start-0 m-2`}>
           {categoryData(category, "text")}
