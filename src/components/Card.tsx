@@ -21,10 +21,10 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
       else if (category === "ova") return "OVA"
       else return ""
     } else {
-      if (category === "film") return "danger"
-      else if (category === "anime") return "info"
-      else if (category === "ova") return "warning"
-      else return "dark"
+      if (category === "film") return "bg-danger-200 text-danger-600"
+      else if (category === "anime") return "bg-primary-200 text-primary-600"
+      else if (category === "ova") return "bg-secondary-200 text-secondary-600"
+      else return "bg-gray-200 text-gray-600"
     }
   }
 
@@ -60,7 +60,7 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
           className="mw-100 w-100 bg-image"
           style={{ backgroundImage: `url(${img})` }}
         ></div>
-        <span className={`badge bg-${categoryData(category, "color")} position-absolute bottom-0 start-0 m-2`}>
+        <span className={`badge bg-${categoryData(category, "color")} text-uppercase position-absolute bottom-0 start-0 m-2`}>
           {categoryData(category, "text")}
         </span>
       </div>

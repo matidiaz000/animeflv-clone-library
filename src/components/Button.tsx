@@ -22,7 +22,7 @@ export const Button = ({variant, children, href, external, disabled, color, span
   const getClass = (): string => {
     const listClass: string[] = [
       (span ? 'px-2 py-1' : 'btn'),
-      'text-decoration-none text-uppercase',
+      'text-decoration-none text-uppercase fw-bold',
       (!className?.includes("rounded") ? "rounded-pill" : ""),
       (disabled ? `disabled` : ""),
       (color && variant == 'text' ? `text-${color} border-0` : ""),
