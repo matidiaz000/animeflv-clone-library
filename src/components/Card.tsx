@@ -39,7 +39,7 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
     <a href={link} className="text-decoration-none CardComponent">
       <div className="position-relative rounded-3 overflow-hidden">
         <img className="mw-100 w-100 border-0 bg-image" src={img} alt={title} />
-        <span className="badge bg-dark text-white position-absolute bottom-0 end-0 m-2">
+        <span className="bg-dark text-white position-absolute bottom-0 end-0 m-2 px-2 py-1 rounded small fw-semibold">
           {time}
         </span>
       </div>
@@ -60,7 +60,7 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
           className="mw-100 w-100 bg-image"
           style={{ backgroundImage: `url(${img})` }}
         ></div>
-        <span className={`badge ${categoryData(category, "color")} text-uppercase position-absolute bottom-0 start-0 m-2`}>
+        <span className={`${categoryData(category, "color")} text-uppercase position-absolute bottom-0 start-0 m-2`}>
           {categoryData(category, "text")}
         </span>
       </div>
