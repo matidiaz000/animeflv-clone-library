@@ -58,13 +58,10 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
       return (
         <div className="text-decoration-none CardComponent">
           <div className="position-relative rounded-3 overflow-hidden">
-            <div className="bg-primary text-white w-100 d-flex justify-content-center align-items-center" style={{height: 93}}>
+            <div className="bg-primary text-white w-100 d-flex justify-content-center align-items-center flex-column" style={{height: 93}}>
               <Icon icon="Show" size={35}/>
               <span>Reproduciendo</span>
             </div>
-            <span className="bg-dark text-white position-absolute bottom-0 end-0 m-2 px-2 py-1 rounded small fw-semibold">
-              {time}
-            </span>
           </div>
           <div className="text-dark text-decoration-none p-2">
             <span className="fw-bold lh-1 mb-1 clamp clamp2">{title}</span>
