@@ -60,7 +60,7 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
           className="mw-100 w-100 bg-image"
           style={{ backgroundImage: `url(${img})` }}
         ></div>
-        <span className={`badge bg-${categoryData(category, "color")} text-uppercase position-absolute bottom-0 start-0 m-2`}>
+        <span className={`badge ${categoryData(category, "color")} text-uppercase position-absolute bottom-0 start-0 m-2`}>
           {categoryData(category, "text")}
         </span>
       </div>
