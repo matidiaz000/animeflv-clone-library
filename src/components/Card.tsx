@@ -35,23 +35,47 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
     return `${day}/${month}/${year}`;
   }
 
-  if (time && children) return (
-    <a href={link} className="text-decoration-none CardComponent">
-      <div className="position-relative rounded-3 overflow-hidden">
-        <img className="mw-100 w-100 border-0 bg-image" src={img} alt={title} />
-        <span className="bg-dark text-white position-absolute bottom-0 end-0 m-2 px-2 py-1 rounded small fw-semibold">
-          {time}
-        </span>
-      </div>
-      <div className="text-dark text-decoration-none p-2">
-        <span className="fw-bold lh-1 mb-1 clamp clamp2">{title}</span>
-        <div className="d-flex justify-content-between align-items-start">
-          <span className="small clamp clamp2">{subtitle}</span>
-          <>{children}</>
+  if (time) {
+    if (img) {
+      return (
+        <a href={link} className="text-decoration-none CardComponent">
+          <div className="position-relative rounded-3 overflow-hidden">
+            <img className="mw-100 w-100 border-0 bg-image" src={img} alt={title} />
+            <span className="bg-dark text-white position-absolute bottom-0 end-0 m-2 px-2 py-1 rounded small fw-semibold">
+              {time}
+            </span>
+          </div>
+          <div className="text-dark text-decoration-none p-2">
+            <span className="fw-bold lh-1 mb-1 clamp clamp2">{title}</span>
+            <div className="d-flex justify-content-between align-items-start">
+              <span className="small clamp clamp2">{subtitle}</span>
+              <>{children}</>
+            </div>
+          </div>
+        </a>
+      )
+    } else {
+      return (
+        <div className="text-decoration-none CardComponent">
+          <div className="position-relative rounded-3 overflow-hidden">
+            <div className="bg-primary text-white w-100 h-100">
+              <Icon icon="Show" />
+            </div>
+            <span className="bg-dark text-white position-absolute bottom-0 end-0 m-2 px-2 py-1 rounded small fw-semibold">
+              {time}
+            </span>
+          </div>
+          <div className="text-dark text-decoration-none p-2">
+            <span className="fw-bold lh-1 mb-1 clamp clamp2">{title}</span>
+            <div className="d-flex justify-content-between align-items-start">
+              <span className="small clamp clamp2">{subtitle}</span>
+              <>{children}</>
+            </div>
+          </div>
         </div>
-      </div>
-    </a>
-  )
+      )
+    }
+  }
 
   if (title && subtitle) return (
     <a href={link} className="text-decoration-none CardComponent">
