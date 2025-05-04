@@ -1,4 +1,5 @@
-import { Icon } from "./Icon"
+import { Icon } from "./Icon";
+import { NavLink } from "react-router-dom";
 
 export type Categories = 'film' | 'anime' | 'ova' | 'default'
 
@@ -38,7 +39,7 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
   if (time) {
     if (img) {
       return (
-        <a href={link} className="text-decoration-none CardComponent">
+        <NavLink to={link} className="text-decoration-none CardComponent">
           <div className="position-relative rounded-3 overflow-hidden">
             <img className="mw-100 w-100 border-0 bg-image" src={img} alt={title} />
             <span className="bg-dark text-white position-absolute bottom-0 end-0 m-2 px-2 py-1 rounded small fw-semibold">
@@ -52,7 +53,7 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
               <>{children}</>
             </div>
           </div>
-        </a>
+        </NavLink>
       )
     } else {
       return (
@@ -76,7 +77,7 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
   }
 
   if (title && subtitle) return (
-    <a href={link} className="text-decoration-none CardComponent">
+    <NavLink to={link} className="text-decoration-none CardComponent">
       <div className="position-relative rounded-3 overflow-hidden">
         <div
           className="mw-100 w-100 bg-image"
@@ -90,7 +91,7 @@ export const Card = ({img, category, title, subtitle, link, time, date, children
         <span className="fw-bold lh-1 mb-2 clamp clamp2">{title}</span>
         <span className="text-opacity-50 small d-block">{subtitle}</span>
       </div>
-    </a>
+    </NavLink>
   )
 
   if (date) return (

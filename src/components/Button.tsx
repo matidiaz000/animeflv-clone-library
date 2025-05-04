@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import type { IColors } from "../inrerfaces/Colors";
 import { Icon } from "./Icon";
 
@@ -38,13 +39,22 @@ export const Button = ({variant, children, href, external, disabled, color, span
   };
 
   if (href) {
-    return (
-      <a className={getClass()} href={href} target={external ? "_blank" : "_top"} {...rest}>
-        {startIcon && <Icon className={`${children && "me-1"}`} icon={startIcon} />}
-        {children}
-        {endIcon && <Icon className="ms-1" icon={endIcon} />}
-      </a>
-    )
+    if (external)
+      return (
+        <a className={getClass()} href={href} target="_blank" {...rest}>
+          {startIcon && <Icon className={`${children && "me-1"}`} icon={startIcon} />}
+          {children}
+          {endIcon && <Icon className="ms-1" icon={endIcon} />}
+        </a>
+      )
+    else 
+      return (
+        <NavLink className={getClass()} to={href} {...rest}>
+          {startIcon && <Icon className={`${children && "me-1"}`} icon={startIcon} />}
+          {children}
+          {endIcon && <Icon className="ms-1" icon={endIcon} />}
+        </NavLink>
+      )
   }
 
   if (span) {
