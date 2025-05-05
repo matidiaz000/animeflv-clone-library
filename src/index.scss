@@ -1,6 +1,15 @@
 @import './styles/variables';
 @import './styles/poppins-font';
+@import './styles/skeletons';
+@import './styles/card-component';
 @import './styles';
+
+@each $color, $value in $theme-colors {
+  .watercolor-#{$color} {
+    color: $value;
+    background-color: rgba($value, .15);
+  }
+}
 
 html, body, #root {
   height: 100%;
@@ -12,32 +21,6 @@ i {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.card {
-  padding: 2em;
-}
-
-.CardComponent:hover .bg-image {
-  transform: scale(1.1);
-}
-
-.CardComponent .bg-image {
-  transition: transform 200ms ease-in-out;
-}
-
-.CardComponent div.bg-image {
-  aspect-ratio: 2 / 3;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-@each $color, $value in $theme-colors {
-  .watercolor-#{$color} {
-    color: $value;
-    background-color: rgba($value, .15);
-  }
 }
 
 .lh-0 {
