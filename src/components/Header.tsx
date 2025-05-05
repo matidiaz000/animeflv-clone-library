@@ -9,7 +9,7 @@ interface IProps {
 export const Header = ({logo, leftContent, rightContent}: IProps) => {
   return (
     <header className="bg-dark">
-      <div className="container-md py-4">
+      <div className="container-md py-3 py-md-4">
         <div className="d-flex justify-content-between align-items-center">
           <NavLink to="/">
             <img src={logo} alt="AnimeFLV" />
