@@ -1,6 +1,6 @@
 {
   "name": "@matidiaz000/animeflv-clone-library",
-  "version": "0.0.42",
+  "version": "1.0.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/matidiaz000"
   },
