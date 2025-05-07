@@ -5,7 +5,7 @@
   -webkit-box-orient: vertical;
 }
 
-.clamp2 {
+.clamp1 {
   line-clamp: 1;
   -webkit-line-clamp: 1;
   min-height: 1rem;
@@ -17,13 +17,13 @@
   min-height: 2rem;
 }
 
-.clamp2 {
+.clamp3 {
   line-clamp: 3;
   -webkit-line-clamp: 3;
   min-height: 3rem;
 }
 
-.clamp2 {
+.clamp4 {
   line-clamp: 4;
   -webkit-line-clamp: 4;
   min-height: 4rem;
