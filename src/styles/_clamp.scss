@@ -1,0 +1,36 @@
+.clamp {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.clamp2 {
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  min-height: 1rem;
+}
+
+.clamp2 {
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  min-height: 2rem;
+}
+
+.clamp2 {
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  min-height: 3rem;
+}
+
+.clamp2 {
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  min-height: 4rem;
+}
+
+.clamp5 {
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
+  min-height: 5rem;
+}

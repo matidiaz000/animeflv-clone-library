@@ -2,14 +2,8 @@
 @import './styles/poppins-font';
 @import './styles/skeletons';
 @import './styles/card-component';
+@import './styles/clamp';
 @import './styles';
-
-@each $color, $value in $theme-colors {
-  .watercolor-#{$color} {
-    color: $value;
-    background-color: rgba($value, .15);
-  }
-}
 
 html, body, #root {
   height: 100%;
@@ -29,25 +23,6 @@ i {
 
 .innerHTML i {
   font-size: initial;
-}
-
-.clamp {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-}
-
-.clamp5 {
-  line-clamp: 5;
-  -webkit-line-clamp: 5;
-  min-height: 5rem;
-}
-
-.clamp2 {
-  line-clamp: 2;
-  -webkit-line-clamp: 2;
-  min-height: 2rem;
 }
 
 .badge {
@@ -72,16 +47,6 @@ i {
   left: -100%;
   height: 100%;
   z-index: 0;
-}
-
-.gradient-top {
-  background: #212529;
-  background: linear-gradient(0deg,rgba(33, 37, 41, 0) 2%, rgba(33, 37, 41, 1) 100%) !important;
-}
-
-.gradient-bottom {
-  background: #212529;
-  background: linear-gradient(0deg,rgba(33, 37, 41, 1) 2%, rgba(33, 37, 41, 0) 100%) !important;
 }
 
 @media (min-width: 768px) {

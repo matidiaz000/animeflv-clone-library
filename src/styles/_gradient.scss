@@ -1,0 +1,17 @@
+.gradient-top {
+  background: #212529;
+  background: linear-gradient(
+    0deg,
+    rgba(33, 37, 41, 0) 2%,
+    rgba(33, 37, 41, 1) 100%
+  ) !important;
+}
+
+.gradient-bottom {
+  background: #212529;
+  background: linear-gradient(
+    0deg,
+    rgba(33, 37, 41, 1) 2%,
+    rgba(33, 37, 41, 0) 100%
+  ) !important;
+}
